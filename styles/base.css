@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+header {
+    background-color: #1f4b75;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.profile {
+    left: 30px;
+    margin: 40px;
+    box-shadow: 4px 4px 15px rgba(64, 3, 3, 0.2);
+}
+
+.profile img {
+    width: 10px;
+    border-radius: 0%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+nav {
+    background-color: #3d2a1e;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+h2 {
+    text-align: left;
+    color: #1f4b75;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 4px 4px 15px rgba(64, 3, 3, 0.2); 
+    padding: 15px;
+    width: 45%;
+    min-width: 300px;
+    margin: 10px;
+}
+
+
+.card h3 {
+    background-color: #2c5375;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #1f4b75;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer img {
+    width: 30px;
+}
