@@ -14,7 +14,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    
 }
 
 
@@ -62,6 +62,7 @@ nav ul li a {
 
 main {
     padding: 20px;
+    
 }
 
 
@@ -80,6 +81,8 @@ h2 {
     justify-content: space-around;
     flex-wrap: wrap;
     text-align: center;
+    
+    
 }
 
 
@@ -91,6 +94,7 @@ h2 {
     width: 45%;
     min-width: 300px;
     margin: 10px;
+    
 }
 
 
@@ -102,7 +106,6 @@ h2 {
     text-align: center;
 }
 
-
 footer {
     background-color: #1f4b75;
     color: white;
@@ -110,7 +113,106 @@ footer {
     padding: 10px;
     font-size: 14px;
 }
-
 footer img {
     width: 30px;
+    }
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #ddd;
+}
+
+.dark-mode header {
+    background-color: #222;
+}
+
+.dark-mode .card {
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Hide menu button on larger screens */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    
+}
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    
+}
+.overlay {
+   
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    font-size: 24px;
+    font-style: italic;
+}
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.learning, .info {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.temple-image {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.label {
+    position: absolute;
+    top: 10%; /* Adjust for positioning */
+    left: 10%; /* Adjust for positioning */
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+/* Google Map Styling */
+.map-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
 }

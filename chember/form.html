@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page - W04 Team Activity</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation (example, adapt as necessary) -->
+    <header>
+        <div class="header-container">
+            <h1>WDD230 Course</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="join.html">join us </a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Submit Your Information</h2>
+            <form action="record.html" method="get" id="form" class="form">
+                <!-- Username Field -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <!-- Password Field -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}" title="Password must be at least 8 characters and only alphanumeric characters.">
+
+                <!-- Password Confirmation Field -->
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <!-- Email Field -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu" title="Please enter a valid email address from the byui.edu domain">
+
+                <!-- Page Rating -->
+                <label for="rating">Page Rating:</label>
+                <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5">
+                <span id="rating-value">5</span>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> WDD230 Course</p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber - Membership Application</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="header-container">
+            <h1>Chamber of Commerce</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="thankyou.html">Thank You</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="join-form-section">
+            <h2>Membership Application Form</h2>
+            <form action="thankyou.html" method="get" id="join-form">
+
+                <!-- First Name -->
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <!-- Last Name -->
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <!-- Title/Position -->
+                <label for="title">Title/Position:</label>
+                <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}" required title="Title must contain only letters, spaces, and hyphens with at least 7 characters">
+
+                <!-- Email -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="example@domain.com">
+
+                <!-- Phone Number -->
+                <label for="phone">Mobile Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <!-- Business/Organization Name -->
+                <label for="business-name">Business/Organization Name:</label>
+                <input type="text" id="business-name" name="business-name" required>
+
+                <!-- Membership Level -->
+                <label for="membership-level">Membership Level:</label>
+                <select id="membership-level" name="membership-level" required>
+                    <option value="NP">NP Membership (Non-profit)</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
+
+                <!-- Business/Organization Description -->
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <!-- Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Application">
+
+            </form>
+        </section>
+
+        <!-- Membership Levels and Benefits -->
+        <section class="membership-benefits">
+            <h3>Membership Levels & Benefits</h3>
+            <div class="benefits">
+                <div>
+                    <h4>NP Membership</h4>
+                    <p>No fee. Non-profit organizations.</p>
+                    <ul>
+                        <li>Access to special events</li>
+                        <li>Networking opportunities</li>
+                        <li>Discounted advertising on our site</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Bronze Membership</h4>
+                    <p>NGN50/year</p>
+                    <ul>
+                        <li>All NP Membership benefits</li>
+                        <li>Spotlight advertising on the website</li>
+                        <li>Exclusive training programs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Silver Membership</h4>
+                    <p>NGN100/year</p>
+                    <ul>
+                        <li>All Bronze Membership benefits</li>
+                        <li>Discounted rates for events</li>
+                        <li>Featured on homepage for 1 month</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Gold Membership</h4>
+                    <p>NGN200/year</p>
+                    <ul>
+                        <li>All Silver Membership benefits</li>
+                        <li>Priority spot at special events</li>
+                        <li>Exclusive email newsletters</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Chamber of Commerce</p>
+    </footer>
+
+
+<script src="scripts/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Tech Solutions Inc.",
+        "address": "123 Main St, Tech City",
+        "phone": "(123) 456-7890",
+        "website": "https://techsolutions.com",
+        "image": "techsolutions.png",
+        "membership": "Gold"
+    },
+    {
+        "name": "Green Earth Landscaping",
+        "address": "456 Greenway Ave, Nature Town",
+        "phone": "(987) 654-3210",
+        "website": "https://greenearth.com",
+        "image": "greenearth.png",
+        "membership": "Silver"
+    },
+    {
+        "name": "Speedy Deliveries",
+        "address": "789 Expressway Blvd, Fast City",
+        "phone": "(555) 123-4567",
+        "website": "https://speedydeliveries.com",
+        "image": "speedydeliveries.png",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Elite Fitness Gym",
+        "address": "101 Workout Ln, Fit Town",
+        "phone": "(777) 888-9999",
+        "website": "https://elitefitness.com",
+        "image": "elitefitness.png",
+        "membership": "Gold"
+    },
+    {
+        "name": "Smart Tech Gadgets",
+        "address": "202 Innovation St, Silicon Valley",
+        "phone": "(800) 200-3000",
+        "website": "https://smarttech.com",
+        "image": "smarttech.png",
+        "membership": "Platinum"
+    }
+]

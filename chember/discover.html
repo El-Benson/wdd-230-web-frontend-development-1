@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Benin City Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script defer src="scripts/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Benin City Chamber of Commerce</h1>
+            <button id="menu-toggle">&#9776;</button>
+        </div>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="form.html">form</a></li>
+                <li><a href="join.html">join us </a></li>
+             
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <section class="visit-message">
+                <h2>Welcome</h2>
+                <p id="visit-message">Checking last visit...</p>
+            </section>
+            <section class="demographics">
+                <h2>Demographics</h2>
+                <p>Population: 1.5M</p>
+                <p>Median Age: 22</p>
+                <p>Key Industries: Trade, Manufacturing, Technology</p>
+            </section>
+            <section class="calendar">
+                <h2>Event Calendar</h2>
+                <p id="current-date"></p>
+                <p>Upcoming Events</p>
+            </section>
+        </aside>
+
+        <section class="main-content">
+            <h2>Local Attractions</h2>
+            <div class="image-grid">
+                <figure>
+                    <img src="images/land.jpeg" alt="City Landmark" loading="lazy" />
+                    <figcaption>City Landmark</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/market.jpeg" alt="Market Scene" loading="lazy" />
+                    <figcaption>Market Scene</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/festival.jpeg" alt="Cultural Festival" loading="lazy" />
+                    <figcaption>Cultural Festival</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/site.jpeg" alt="Historical Site" loading="lazy" />
+                    <figcaption>Historical Site</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/park.jpeg" alt="Local Park" loading="lazy" />
+                    <figcaption>Local Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/night.jpeg" alt="Night View" loading="lazy" />
+                    <figcaption>Night View</figcaption>
+                </figure>
+            </div>
+        </section>
+        <div id="weather-info"></div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Benin City Chamber of Commerce</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
