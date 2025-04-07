@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benin City Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Benin City Chamber of Commerce - Supporting local businesses and economic growth.">
-    <meta property="og:title" content="Benin City Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Benin City Chamber of Commerce - Supporting local businesses and economic growth."
+    />
+    <meta property="og:title" content="Benin City Chamber of Commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <h1>Benin City Chamber of Commerce</h1>
-            <button id="menu-toggle">&#9776;</button>
-        </div>
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="join.html">join us </a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="form.html">form</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-               
-            </ul>
-        </nav>
+      <div class="header-container">
+        <h1>Benin City Chamber of Commerce</h1>
+        <button id="menu-toggle">&#9776;</button>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="join.html">join us </a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="form.html">form</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
+      <section id="activity-links">
+        <h2>Learning Activities</h2>
+        <ul id="activities-list"></ul>
+      </section>
 
-        <section id="activity-links">
-            <h2>Learning Activities</h2>
-            <ul id="activities-list"></ul>
-          </section>
-          
-        <section class="hero">
-            <img src="images/hero.jpg" alt="Benin City Business District">
-            <div class="hero-text">
-                <h2>Empowering Local Businesses</h2>
-                <a href="#" class="cta-button">Join the Chamber</a>
-            </div>
-        </section>
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <p>Stay updated with our latest business networking events.</p>
-        </section>
-        <section class="weather">
-            <h2>Current Weather</h2>
-            <p id="weather-info">Fetching weather data...</p>
-        </section>
-        <section class="spotlights">
-            <h2>Business Spotlights</h2>
-            <p>Highlighting top businesses in Benin City.</p>
-        </section>
+      <section class="hero">
+        <img src="images/hero.jpg" alt="Benin City Business District" />
+        <div class="hero-text">
+          <h2>Empowering Local Businesses</h2>
+          <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+      </section>
+      <section class="events">
+        <h2>Upcoming Events</h2>
+        <p>Stay updated with our latest business networking events.</p>
+      </section>
+      <section class="weather">
+        <h2>Current Weather</h2>
+        <p id="weather-info">Fetching weather data...</p>
+      </section>
+      <section class="spotlights">
+        <h2>Business Spotlights</h2>
+        <p>Highlighting top businesses in Benin City.</p>
+      </section>
     </main>
     <footer>
-        <p>&copy; <span id="current-year"></span> Benin City Chamber of Commerce</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
+      <p>
+        &copy; <span id="current-year"></span> Benin City Chamber of Commerce
+      </p>
+      <p>Last Updated: <span id="last-modified"></span></p>
     </footer>
     <script src="scripts/scripts.js"></script>
     <script src="scripts/links.js"></script>
     <script src="scripts/weather.js"></script>
-</body>
+  </body>
 </html>
