@@ -1,0 +1,28 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "links": [
+        { "title": "Layout", "url": "https://example.com/layout" },
+        { "title": "Media Query", "url": "https://example.com/media-query" },
+        { "title": "JS Pen", "url": "https://example.com/js-pen" }
+      ]
+    },
+    {
+      "week": 2,
+      "links": [
+        { "title": "Design", "url": "https://example.com/design" },
+        { "title": "Menu", "url": "https://example.com/menu" },
+        { "title": "BOM-25", "url": "https://example.com/bom-25" }
+      ]
+    },
+    {
+      "week": 3,
+      "links": [
+        { "title": "Web Lazy", "url": "https://example.com/web-lazy" },
+        { "title": "srcset", "url": "https://example.com/srcset" },
+        { "title": "localStorage", "url": "https://example.com/local-storage" }
+      ]
+    }
+  ]
+}

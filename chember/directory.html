@@ -1,36 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chamber of Commerce Directory</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <!-- External JavaScript files for functionality -->
     <script defer src="scripts/directory.js"></script>
-</head>
-<body>
+    <script defer src="scripts/scripts.js"></script>
+    <script defer src="scripts/darkmode-menu.js"></script>
+    <meta
+      name="description"
+      content="Browse through the Chamber of Commerce business directory to discover a wide range of businesses in various categories."
+    />
+    <meta property="og:title" content="Chamber of Commerce Directory" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/directory-hero.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com/directory.html" />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
     <header>
+      <div class="header-container">
         <h1>Chamber of Commerce</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                
-            </ul>
-        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+
+        <!-- Dark Mode Toggle Button -->
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav id="menu" role="navigation">
+        <ul>
+          <li><a href="index.html" aria-label="Go to the homepage">Home</a></li>
+          <li>
+            <a
+              href="directory.html"
+              class="active"
+              aria-label="View the business directory"
+              >Directory</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
+    <!-- Hero Image Section with Call to Action -->
+    <section class="hero">
+      <img
+        src="images/directory-hero.jpg"
+        alt="Business Directory Overview"
+        loading="lazy"
+      />
+      <div class="cta">
+        <h2>Discover Businesses in Our Chamber</h2>
+        <p>
+          Explore a wide range of businesses, connect with peers, and find
+          services that can help you grow your business.
+        </p>
+        <a
+          href="#directory"
+          class="cta-button"
+          aria-label="View business directory"
+          >View Directory</a
+        >
+      </div>
+    </section>
+
     <main>
-        <h2>Business Directory</h2>
+      <!-- Business Directory Section -->
+      <section>
+        <h2>Welcome to the Chamber of Commerce Business Directory</h2>
+        <p>
+          Our directory showcases a diverse range of businesses, from local
+          startups to well-established companies. Whether you're looking to
+          connect with other businesses or find services that can support your
+          growth, this directory is a valuable resource for all our members.
+        </p>
+        <p>
+          You can view the directory in either a grid or list format to suit
+          your preference. Browse through the businesses by category or
+          location, and find the perfect match for your needs.
+        </p>
+
+        <!-- View Toggle Section -->
         <div class="view-toggle">
-            <button id="gridView">Grid View</button>
-            <button id="listView">List View</button>
+          <button id="gridView" aria-label="Switch to Grid View">
+            Grid View
+          </button>
+          <button id="listView" aria-label="Switch to List View">
+            List View
+          </button>
         </div>
-        <section id="directory" class="grid"></section>
+
+        <!-- Business Directory Content -->
+        <section
+          id="directory"
+          class="grid"
+          role="region"
+          aria-labelledby="businessDirectory"
+        >
+          <!-- Dynamically populated content goes here -->
+          <p>
+            Here is where the business information will be displayed once the
+            directory is populated.
+          </p>
+        </section>
+      </section>
     </main>
 
+    <!-- Current Event Section (Highlight Key Events) -->
+    <section class="current-events">
+      <h2>Upcoming Chamber Events</h2>
+      <p>Stay tuned for upcoming events and networking opportunities!</p>
+      <ul>
+        <li>Annual Business Conference - July 2025</li>
+        <li>Chamber Networking Mixer - August 2025</li>
+      </ul>
+    </section>
+
+    <!-- Dynamic Weather Section -->
+    <div id="weather-info" aria-live="polite"></div>
+
+    <!-- Company Spotlight Section -->
+    <section class="company-spotlight">
+      <h2>Company Spotlight</h2>
+      <p>
+        Each month, we spotlight a Chamber member business. This month's
+        featured company is <strong>XYZ Innovations</strong>, a leading tech
+        startup in the region.
+      </p>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Chamber of Commerce | Last updated: <span id="lastUpdated"></span></p>
+      <p>&copy; <span id="current-year"></span> Chamber of Commerce</p>
+      <p>Last Updated: <span id="last-modified"></span></p>
     </footer>
-</body>
+
+    <script>
+      // Update current year and last modified date
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+      document.getElementById("last-modified").textContent =
+        document.lastModified;
+    </script>
+  </body>
 </html>

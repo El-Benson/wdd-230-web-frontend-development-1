@@ -1,37 +1,45 @@
-const baseURL = "https://yourgithubusername.github.io/wdd230/";
-const linksURL = `${baseURL}data/links.json`;
+const linksURL = "https://heavenlyaura.github.io/wdd230/data/links.json"; // Path to your JSON file
+const list = document.querySelector(".activities"); // The element where the activities will be displayed
 
-async function getLinks() {
-    try {
-        const response = await fetch(linksURL);
-        const data = await response.json();
-        displayLinks(data.weeks);
-    } catch (error) {
-        console.error("Error fetching links:", error);
+// Function to fetch and display the learning activities
+async function getLinksData(url) {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      displayLinks(data.weeks); // Pass the weeks array to display function
+    } else {
+      console.error("Failed to fetch data", response);
     }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
 
+// Function to display the learning activities dynamically
 function displayLinks(weeks) {
-    const activityList = document.getElementById("activity-links");
-    activityList.innerHTML = ""; 
+  weeks.forEach((week) => {
+    let weekNumber = week.week; // Get the week number
+    let links = week.links; // Get the links array for this week
 
-    weeks.forEach(week => {
-        let weekItem = document.createElement("li");
-        weekItem.innerHTML = `<strong>${week.week}:</strong> `;
+    // Create a <p> element for each week
+    const weekParagraph = document.createElement("p");
+    weekParagraph.textContent = `Week ${weekNumber}: `;
 
-        week.links.forEach((link, index) => {
-            let linkItem = document.createElement("a");
-            linkItem.href = baseURL + link.url;
-            linkItem.textContent = link.title;
-            weekItem.appendChild(linkItem);
-
-            if (index < week.links.length - 1) {
-                weekItem.innerHTML += " | "; 
-            }
-        });
-
-        activityList.appendChild(weekItem);
+    links.forEach((item) => {
+      const aTag = document.createElement("a");
+      aTag.setAttribute("href", item.url); // Set the URL for the link
+      aTag.textContent = item.title; // Set the text for the link
+      weekParagraph.appendChild(aTag); // Append the link to the <p> element
+      weekParagraph.appendChild(document.createTextNode(" | ")); // Add a separator
     });
+
+    // Remove the last separator
+    weekParagraph.lastChild.remove(); // Removes the last "|" after the last link
+
+    list.appendChild(weekParagraph); // Append the paragraph to the list
+  });
 }
 
-getLinks();
+// Call the function to load and display links
+getLinksData(linksURL);

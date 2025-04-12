@@ -1,101 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 230 - Web Frontend Development | Ade-Benson Kehinde Michael | Course Assignment Portal">
-    <meta name="author" content="Ade-Benson Kehinde Michael">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Ade-Benson Kehinde Michael - WDD 230">
-    <meta property="og:description" content="WDD 230 - Web Frontend Development course portal. Check out my assignments and projects!">
-    <meta property="og:image" content="images/social-preview.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/wdd230">
-    <meta property="og:type" content="website">
-
-    <title>Ade-Benson Kehinde Michael - WDD 230</title>
-
-    <!-- CSS Normalization -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ade-Benson Kehinde Michael" />
+    <meta name="description" content="course assignment portal" />
+    <meta
+      property="og:title"
+      content="Ade-Benson Kehinde Michael - WDD 230 - Web Frontend Development"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://t3.ftcdn.net/jpg/03/59/31/68/360_F_359316888_QL4VKw3ZLdZWeHGZaajVrt6jbWQG5NsM.jpg"
+    />
+    <meta property="og:url" content="https://heavenlyaura.github.io/wdd230/" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <title>
+      Ade-Benson Kehinde Michael - WDD 230 - Web Frontend Development
+    </title>
+  </head>
+  <body>
     <header>
-        <div class="profile">
-            <img src="images/michael.jpg" alt="Ade-Benson Kehinde Michael picture">
-        </div>
-        <h1>Ade-Benson Kehinde Michael</h1>
+      <div class="profile-picture">
+        <img class="my-image" src="images/michael.jpg" alt="my picture" />
+      </div>
+      <h1>Ade-Benson Kehinde Michael</h1>
 
-        <button id="dark-mode-toggle">🌙</button>
-        
-        <!-- Hamburger Menu Button -->
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+      <!-- Dark Mode Toggle Button -->
+      <button id="dark-mode-toggle">🌙</button>
+
+      <!-- Hamburger Menu Button -->
+      <button id="menu-toggle" aria-label="Toggle menu">☰</button>
     </header>
 
     <nav>
-        
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chember/index.html">chember</a></li>
-            <li><a href="chember-site-plan.html">Site plan</a></li>
-            <li><a href="#">Form</a></li>
-        </ul>
+      <button id="menu"></button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chember-site-plan.html">Site Plan</a></li>
+        <li><a href="chember/index.html">Chamber</a></li>
+
+        <li>
+          <a
+            href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng"
+            target="_blank"
+            >Scripture</a
+          >
+        </li>
+      </ul>
     </nav>
 
+    <div class="hero">
+      <picture>
+        <source
+          srcset="images/aba-nigeria-temple.webp"
+          media="(max-width: 500px)"
+        />
+        <source media="(max-width: 980px)" srcset="images/temple.webp" />
+        <img src="images/temple.webp" alt="Provo City Temple" />
+      </picture>
+      <div class="label">
+        <h4>Provo City Temple</h4>
+      </div>
+    </div>
+
     <main>
+      <h2>WDD 230: Web Frontend Development</h2>
+      <hr />
 
-        <main>
-            <div class="container">
-                <img src="images/temple.webp" alt="Temple" class="temple-image" loading="lazy">
-                <div class="overlay">Provo City Temple </div>
-            </div>
-        <h2>WDD 230: Web Frontend Development</h2>
-        <section class="container">
-            <div class="card">
-                    <h3>Learning Activities</h3>
-                    <p>Week 01: <a href="#">Layout</a> | <a href="#">Media Query</a> | <a href="#">JS Pen</a></p>
-                    <p>Week 02: <a href="#">Design</a> | <a href="#">Menu</a> | <a href="#">BOM-25</a></p>
-                    <p>Week 03: <a href="#">Web Lazy</a> | <a href="#">srcset</a> | <a href="#">localStorage</a></p>
-                    <p>Week 04:</p>
-                    <p>Week 05:</p>
-                    <p>Week 06:</p>
-                </div>
-            <div class="card">
-                <h3>Information</h3>
-                <p>Nigeria</p>
-                <p> a place to be </p>
-                <p>Page Visits: 7</p>
-            </div>
-        </section>
+      <!-- Learning Activities Section -->
+      <section class="card">
+        <h3>Learning Activities</h3>
+        <ol class="activities"></ol>
+        <p>
+          Week 01: <a href="#">Layout</a> | <a href="#">Media Query</a> |
+          <a href="#">JS Pen</a>
+        </p>
+        <p>
+          Week 02: <a href="#">Design</a> | <a href="#">Menu</a> |
+          <a href="#">BOM-25</a>
+        </p>
+        <p>
+          Week 03: <a href="#">Web Lazy</a> | <a href="#">srcset</a> |
+          <a href="#">localStorage</a>
+        </p>
+        <p>Week 04:</p>
+        <p>Week 05:</p>
+        <p>Week 06:</p>
+        <!-- This will be populated dynamically -->
+      </section>
 
-               <!-- Google Map Embed -->
-               <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_URL" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
+      <section class="card">
+        <h3>Information</h3>
+        <p>Nigeria</p>
+        <p>a place to be</p>
+        <p>Page Visits: 7</p>
+      </section>
+
+      <div class="iframe">
+        <iframe
+          title="Area map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d84371.59729517039!2d7.282171261253809!3d9.148857368994495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1706021749332!5m2!1sen!2sng"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </main>
 
-   <footer>
-        <p>2025  Ade-Benson Kehinde Michael</p>
-        <p id="lastModified"></p>
+    <footer>
+      <p id="copyright">Ade-Benson Kehinde Michael</p>
+      <p id="last-modified"></p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="scripts/links.js"></script>
     <script src="scripts/getDates.js"></script>
-</body>
+    <script src="scripts/hambuger.js"></script>
+    <!-- <script src="chamber/scripts/windchill.js"></script> -->
+    <script src="scripts/getweather.js"></script>
+  </body>
 </html>

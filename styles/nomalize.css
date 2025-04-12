@@ -1,15 +1,20 @@
-/* Custom CSS normalization */
+/* Normalize styles for better consistency across browsers */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  font-family: "Roboto", sans-serif;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+ul {
+  list-style-type: none;
 }
